@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="html:1、表格：跨行rowspan 跨列 colspan 去掉表格缝隙：rules&#x3D;”all” caption 表单标题2、表单：单选框radio name属性值设置一样即可单选一个  复选框 checkbox 当checkbox&#x3D;checkbox的时候即为默认选择&lt;input type&#x3D;”file” multiple实现文件的多选&gt; 文本框最大长度：maxlength&#x3D;”” 默认">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML&amp;CSS">
+<meta property="og:url" content="http://example.com/2022/07/11/HTML&CSS/index.html">
+<meta property="og:site_name" content="大西瓜很nice">
+<meta property="og:description" content="html:1、表格：跨行rowspan 跨列 colspan 去掉表格缝隙：rules&#x3D;”all” caption 表单标题2、表单：单选框radio name属性值设置一样即可单选一个  复选框 checkbox 当checkbox&#x3D;checkbox的时候即为默认选择&lt;input type&#x3D;”file” multiple实现文件的多选&gt; 文本框最大长度：maxlength&#x3D;”” 默认">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-11T13:46:12.000Z">
+<meta property="article:modified_time" content="2022-07-13T09:50:59.003Z">
+<meta property="article:author" content="保持热爱 奔赴山海">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/07/11/HTML&CSS/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/07/11/HTML&CSS/","path":"2022/07/11/HTML&CSS/","title":"HTML&CSS"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>HTML&CSS | 大西瓜很nice</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">大西瓜很nice</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">永远憧憬每一天</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="保持热爱 奔赴山海"
+      src="/%5Cimages%5Ctit.jpg">
+  <p class="site-author-name" itemprop="name">保持热爱 奔赴山海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=394670&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/11/HTML&CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/%5Cimages%5Ctit.jpg">
+      <meta itemprop="name" content="保持热爱 奔赴山海">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大西瓜很nice">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="HTML&CSS | 大西瓜很nice">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          HTML&CSS
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-11 21:46:12" itemprop="dateCreated datePublished" datetime="2022-07-11T21:46:12+08:00">2022-07-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-13 17:50:59" itemprop="dateModified" datetime="2022-07-13T17:50:59+08:00">2022-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/HTML-CSS%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">HTML&CSS基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>html:<br>1、表格：跨行rowspan 跨列 colspan 去掉表格缝隙：rules=”all” caption 表单标题<br>2、表单：单选框radio name属性值设置一样即可单选一个  复选框 checkbox 当checkbox=checkbox的时候即为默认选择&lt;input type=”file” multiple实现文件的多选&gt; 文本框最大长度：maxlength=”” 默认输入：placeholder<br>3、文本域：textarea:palceholder(默认值)</p>
+<p>多个块元素纵向排列找标准流，多个块级元素横向排列找浮动。浮动只会影响后面的标准流不会影响前面的标准流</p>
+<p>css:<br>1、div两个盒子移动中间那个盒子导致两个一起移动解决方案:可以为父元素定义上边框，可以为父元素定义上内边距，可给父元素添加overflow:hidden<br>2、块级元素使其水平居中 margin:0 auto； 行内块和行元素水平居中直接给父元素添加text-algin:center<br>3、图片超过div盒子解决方案：img{width:100%}<br>4、圆角边框：border-radius:50%  border-top-right-radius 右上角          border-buttom-right-radius:右下角</p>
+<p>5、盒子（文字）添加阴影：（text）box-shahow:h-shahow（水平阴影）v-shahow（垂直阴影） blur（模糊距离）spread（阴影的尺寸）box-shadow:10px 10px 10px 10px rgba(0,0,0,.3)<br>6、所有元素添加浮动元素以后都会有行内块的一些特性，块级元素没有设置宽度和父级元素一样宽，添加浮动元素以后大小是由里面的内容决定的<br>7、有宽度，margin才会居中<br>8、.box&gt;div {} 只选择一个div<br>9、不方便给父级盒子高度便清除高度<br>10、清除浮动：clear：left right both<br>11、Cursor:pointer 让鼠标变成小手<br>12、p标签里面不放H<br>13、h标签不会继承父级元素的大小，a标签不会继承父级的颜色 div不会继承父级的背景颜色<br>14、导航栏是通过li+a的做法<br>15、导航栏里面的文字不一样多，不给宽度，用padding撑开左右边距 给padding一个左右的值（不给元素宽度，添加一个pandding便不会使元素的盒子变大）（a里面的文字，使用padding使其左右有距离）<br>16、文本框里面的文字距离边框有距离，可以使用padding<br>17、行内块有空白缝隙·<br>18、减掉盒子的内外边距使盒子加边距不会变大 新增css3:box-sizing: border-box;就不用减掉<br>18.内边距:给容器加,控制内部的元素. 外边距:给自己加,控制的是自身于别的元素的距离<br>19.外边距合并水平方向不会合并只有垂直的时候,解决办法:将其中的一个盒子使用margin-botton/将上面的盒子转换为行内块模式<br>20.定位分为static静态定位 (了解) relative 相对定位 (相对之前的位置移动,移动以后之前的位置保留)    absolute 绝对定位(不占据原来位置) fixed 固定定位:跟随版心移动:<br>固定定位 left:50% margin-left : 版心的一半 盒子如果要放在左边 那么值就给相反的right值<br>粘性定位:sticky :保留位置 当拉到可视距离就可以移动  以浏览器的可视窗口为参照点移动元素</p>
+<p>c3盒子模型： 边框、外边距、内边距、和实际内容<br>z-index数值越大越往上<br>21.<br>div::after    div::before          day6 伪元素<br>display:none  隐藏 display:block 显示 占有原来的位置  配合js使用<br>visibility:visible 可视元素  visibility:hidden 隐藏 不再占有原来位置<br>22.精灵图 往上走和往左走数值是负的(一般情况下)<br>23.三角形的做法 箭头朝就给下边框, 箭头朝哪边就给相反方向的边框 其余边框为零</p>
+<p>24.cirsor:pointer 鼠标变小手  default 默认 move 移动 text 文本  not-allowd 禁止<br>25.outline:none 去掉表单的轮廓框          文本域防止拖拽: resize:none (文本域尽的标签尽量放在同一排)<br>26.vertical-align:midden 图片和文垂直居中 只能使用在行内元素或者行内块元素   图片加上div会显示有空白缝隙 加上vertical其中任何一个值都可以去掉<br>27.单行文本溢出显示省略号的三个条件:white-space:nowrap(强制一行内显示文本)  overflow:hidden(超出部分隐藏)   text-overflow:ellipsis (文字超出部分使用省略号进行替代) 哪里需要放哪里<br>多行文本溢出显示省略号<br>-webkit-line-clamp: 3;<br>display: -webkit-box;<br>-webkit-box-orient: vertical;<br>overflow: hidden;<br>text-overflow: ellipsis;</p>
+<p> /* 让所有文字都正常自动换行 */<br>            word-break: break-all;</p>
+<p>28.margin:-1 可以去掉重合的盒子的边框重复问题但是鼠标经过的效果会导致一边的边框显示不出来 解决方案:1.添加相对定位即可.2若果有相对定位即给父元素添加定位 给当前的元素添加 z-index层级<br>文字环绕图片</p>
+<p>29.等腰三角形的做法</p>
+<p>30.清除浮动</p>
+<p>元素加浮动,绝对定位以后都可以设置元素的大小<br>31.不透明度 opacity:0.5 取值在0-1之间      0完全透明 1完全不透明   容器会全部变化 opacity 可以搭配hover搭配过渡效果使用<br>32.细线边框：border-collapse:collapse</p>
+<p>34.图片模糊:filter:blur(5px) 数值越大 图片越模糊<br>伪元素是行内元素 必须写connet<br>padding 给文字  margin给容器<br>min-width设置最小的缩放距离<br>35.object-fit:cover 让当前元素自动填充,删减两边内容进行填充<br>36.transform：translate  移动       不会影响其他盒子</p>
+<p>实现盒子垂直居中  配合定位<br>rotate  旋转    后面跟单位deg   </p>
+<p> Scale缩放<br>37.动画<br>@keyframes 动画时间 {<br>/* 开始状态 <em>.<br>0% (from) {<br>transfrom:translateX( 0px);<br>}<br>100%(to) {<br>transfrom:translate X(1000px);<br>}<br>}<br>类名 {<br>/</em> 里面必须包含 *<br>/* 调用动画 *<br>/* 动画名称*<br>animation-name:动画名称;<br>/<em>持续时间</em><br>animation-duration:2s;<br>}</p>
+<p>38.透视<br>透视写到被观察盒子的父级元素 perspective:像素; 透视越小盒子越大 透视越小越立体 通常距离是800-1200<br>39.3d旋转 rotade<br>40.3d呈现 transform-style：preserve-3d写在父级 影响的子元素</p>
+<p>web移动端<br>1.<br>弹性定位<br>flex-direction:colum设置主轴Y           (默认主轴为row即x轴)<br>2.flex-warp：warp 让子元素换行<br>3.align-content：center 多行设置居中 单行没有效果<br>4.flex-flow：row warp  复合写法<br>5.order：-1； 默认是0 比0小所以排列在前<br>        display: flex;<br>        /* 默认从终点依次对齐 <em>/<br>        justify-content: flex-end;<br>        /</em> 默认从起点依次排列 <em>/<br>        justify-content: start;<br>        /</em> 让内部元素居中排列 <em>/<br>        justify-content: center;<br>        /</em> 空白间距均分在子元素的两侧  视觉效果：起点和终点窄 中间宽 <em>/<br>        justify-content: space-around;<br>        /</em> 元素1在起始位置，最后一个元素在终点位置，剩下的空间均分 <em>/<br>        justify-content: space-between;<br>        /</em> 弹性盒子与容器之间的间距相等 */<br>        justify-content: space-evenly;</p>
+<p>移动适配：网页内容（盒子、文本、图片）自适应屏幕尺寸，在不同的移动设备下，让网页达到一个合理的展示</p>
+<p>2.字号为14px的大小 行高设置成1.5最好<br>3.媒体查询  @mediatype screen     and (max-width:800px;) {<br>body {<br>banckground-color:pink;<br>}<br>}<br>          当屏幕最大的宽度不超过800px时 背景颜色为粉色</p>
+<p>less<br>1.定义一个粉色的变量<br>@color:pink;<br>引用变量<br>body {<br>background-color:@color;<br>}<br>2.     .box{<br>width:100px;<br>height:100px;<br>background-color:pink;<br>a {<br>font-size:14px;<br>如果有伪类元素、交集选择器、伪元素选择器则在前面加上&amp;<br>&amp;：：after {<br>font-size:20px;<br>}<br>}<br>}    定义大盒子以及盒子里面的子元素</p>
+<ol start="3">
+<li>Less可加减乘除  除需要用./或者（）包起来  中间的加减乘除符号必须和数字用空格隔开否则不生效<br>.box {<br>    margin: 100px auto;<br>    background-color: aquamarine;<br>    // width: 100px - 50px;<br>    height: 200px - 100px;<br>    width: (800px / 2px);<br>    height: (1000px * 2px);<br>    width: 500px - 200px;<br>}</li>
+</ol>
+<p>(function flexible (window, document) {<br>  var docEl = document.documentElement<br>  var dpr = window.devicePixelRatio || 1</p>
+<p>  // adjust body font size<br>  function setBodyFontSize () {<br>    if (document.body) {<br>      document.body.style.fontSize = (12 * dpr) + ‘px’<br>    }<br>    else {<br>      document.addEventListener(‘DOMContentLoaded’, setBodyFontSize)<br>    }<br>  }<br>  setBodyFontSize();</p>
+<p>  // set 1rem = viewWidth / 10<br>  function setRemUnit () {<br>    var rem = docEl.clientWidth / 10<br>    docEl.style.fontSize = rem + ‘px’<br>  }</p>
+<p>  setRemUnit()</p>
+<p>  // reset rem unit on page resize<br>  window.addEventListener(‘resize’, setRemUnit)<br>  window.addEventListener(‘pageshow’, function (e) {<br>    if (e.persisted) {<br>      setRemUnit()<br>    }<br>  })</p>
+<p>  // detect 0.5px supports<br>  if (dpr &gt;= 2) {<br>    var fakeBody = document.createElement(‘body’)<br>    var testElement = document.createElement(‘div’)<br>    testElement.style.border = ‘.5px solid transparent’<br>    fakeBody.appendChild(testElement)<br>    docEl.appendChild(fakeBody)<br>    if (testElement.offsetHeight === 1) {<br>      docEl.classList.add(‘hairlines’)<br>    }<br>    docEl.removeChild(fakeBody)<br>  }<br>}(window, document))</p>
+<p>保证px-rem的基准值为设计稿的375px一样  加入js文件  实现web适配 自适应变大变小文字和盒子都会改变</p>
+<p>vw<br>// 百分比和vw的区别<br>// 百分比相对于父级元素的宽度<br>// 1vw指的是永远对视口的百分之一，和父容器的宽度无关    </p>
+<p>// vw方案与rem对比<br>// rem的适配原理较为复杂<br>// vw适配较简单<br>// rem需要js引用<br>// vw不需要引用js 自动获取</p>
+<p>// vw相对单位  相对视口（当前设备的屏幕尺寸）<br>// 1vw相对于视口屏幕的百分之一<br> 响应式</p>
+<!-- 响应式基本要素 -->
+<p>    <!-- 1.页面随屏幕尺寸变化而变化 2.网址没有变化，代表同一个页面 3.网页内容没有变化，容器结构的样式变化--><br>    <!-- 总结 --><br>    <!-- 网站只有一套代码，根据不同的设备尺寸，不同的特性对页面的内容样式进行相应的调整 --><br>    <!-- 优缺点 --><br>    <!-- 灵活性强,能较为快捷的解决多尺寸屏幕的适配问题 --><br>    <!-- 缺点：工作量大 难以维护 无用代码过多 加载时间长 各个设备兼容 也代表没有一个设备尺寸是完美的 属于折中方案 --></p>
+<p>框架</p>
+<!-- 什么是框架? -->
+<!-- 一套完整的方案,有自己的结构体系,定义了体系的流程及规则,预定义了很多东西,用户可根据需求去使用 -->
+<!-- 现阶段的理解: -->
+<!-- 经过多年的发展,发现前端页面中很多样式功能都很普遍,有团队把这些效果抽离出来,别人需要用的时候,直接 -->
+<!-- 使用 -->
+<!-- 本质: -->
+<!-- 不让简单且繁琐的内容过多的占据了开发人员的时间与精力,把更多的精力放在业务的逻辑处理上 -->
+
+<p>ps<br>当文字和图片不在同一层时使用Ctrl+e合并图层再导出<br>2、透明文件导出要用png</p>
+<p>px em rem的区别<br>P x: 表示固定的像素单位<br>E m: 相对单位, 相对于当前容器的字体大小而定,常用于首行缩进2个字符等<br>rem: 相对单位, 相对于当前根标签html的字体大小,1rem = 1html的字体大小<br>V W: 相对单位, 1vw等于视口宽度的百分之一<br>V H: 相对单位, 1vh等于视口高度的百分之一</p>
+<p>flex<br>块级元素和行内元素变成弹性盒子后,宽度和高度默认不写时,分别会发生什么变化?<br>答:<br>块级元素变成弹性盒子后,宽度由父级百分比变为由内容撑开,高度不设置时,默认拉伸铺满父容器的高度.<br>行内元素变成弹性盒子后,可直接设置宽高,内容由内容撑开,高度不设置时,默认拉伸铺满父容器的高度.<br>flex:1到底是什么:<br>flex实际上是flex-grow、flex-shrink和flex-basis三个属性的缩写。</p>
+<p>background-size: cover把背景图扩展至足够大，直至完全覆盖背景区域，图片比例保持不变且不会失真，但某些部分被切割无法显示完整背景图像<br>部分UI库<br>vant<br><a target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant-weapp/#/home">https://vant-contrib.gitee.io/vant-weapp/#/home</a><br>element<br><a target="_blank" rel="noopener" href="https://element.eleme.cn/#/zh-CN">https://element.eleme.cn/#/zh-CN</a><br>uivew<br><a target="_blank" rel="noopener" href="https://www.uviewui.com/components/text.html">https://www.uviewui.com/components/text.html</a><br>ivew<br><a target="_blank" rel="noopener" href="https://iview.github.io/components/table">https://iview.github.io/components/table</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/07/10/Javascript%E5%9F%BA%E7%A1%80/" rel="prev" title="JavaScript">
+                  <i class="fa fa-chevron-left"></i> JavaScript
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/07/12/%E6%80%BB%E7%BB%93/" rel="next" title="总结">
+                  总结 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">保持热爱 奔赴山海</span>
+</div>
+  <div class="powered-by">
+   
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

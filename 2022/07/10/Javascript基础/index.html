@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Js1.prompt  浏览器输入弹出框  用户可以输入ConsoLe.log浏览器控制台打印alert 浏览器弹出框 2.（声明变量）var   age（变量名字）；（赋值 存储内容）age&#x3D;18;（输出结果）console.log(age)变量的初始化var age &#x3D;18;console.log(age)3.js的变量数据类型    是只有程序运行过程中，根据等号右边的值来确定  var n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript">
+<meta property="og:url" content="http://example.com/2022/07/10/Javascript%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="大西瓜很nice">
+<meta property="og:description" content="Js1.prompt  浏览器输入弹出框  用户可以输入ConsoLe.log浏览器控制台打印alert 浏览器弹出框 2.（声明变量）var   age（变量名字）；（赋值 存储内容）age&#x3D;18;（输出结果）console.log(age)变量的初始化var age &#x3D;18;console.log(age)3.js的变量数据类型    是只有程序运行过程中，根据等号右边的值来确定  var n">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-10T13:46:12.000Z">
+<meta property="article:modified_time" content="2022-07-13T09:51:04.607Z">
+<meta property="article:author" content="保持热爱 奔赴山海">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/07/10/Javascript%E5%9F%BA%E7%A1%80/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/07/10/Javascript%E5%9F%BA%E7%A1%80/","path":"2022/07/10/Javascript基础/","title":"JavaScript"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>JavaScript | 大西瓜很nice</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">大西瓜很nice</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">永远憧憬每一天</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="保持热爱 奔赴山海"
+      src="/%5Cimages%5Ctit.jpg">
+  <p class="site-author-name" itemprop="name">保持热爱 奔赴山海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=394670&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/10/Javascript%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/%5Cimages%5Ctit.jpg">
+      <meta itemprop="name" content="保持热爱 奔赴山海">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大西瓜很nice">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="JavaScript | 大西瓜很nice">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JavaScript
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-10 21:46:12" itemprop="dateCreated datePublished" datetime="2022-07-10T21:46:12+08:00">2022-07-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-13 17:51:04" itemprop="dateModified" datetime="2022-07-13T17:51:04+08:00">2022-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JavaScript%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">JavaScript基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Js<br>1.prompt  浏览器输入弹出框  用户可以输入<br>ConsoLe.log浏览器控制台打印<br>alert 浏览器弹出框</p>
+<p>2.（声明变量）<br>var   age（变量名字）；<br>（赋值 存储内容）<br>age=18;<br>（输出结果）<br>console.log(age)<br>变量的初始化<br>var age =18;<br>console.log(age)<br>3.js的变量数据类型    是只有程序运行过程中，根据等号右边的值来确定  var num = 10;<br>js 变量的数据类型是可以变化的       所以不确定属于那种数据类型</p>
+<p>Number数字类型，包含 整数型和浮点型  如21 、 0.21Boolean布尔类型，如 true, false,   等价于 1 和 0；String字符串类型， 如”张三“， 注意咱们JS里面，字符串都带引号 ‘’ ,  “” ,单引号双引号都可，成对undefinedvar a; 声明了变量a ，但是没有给值，  此时  a 默认值为 undefinednullvar a = null ;  声明了变量 a 为空值BigIntBigInt 类型是JS中一个基础的数值类型，可表示任意精度的整数。Symbol符号（Symbols）类型是唯一且不可修改的原始值，并且可以用来作为对象的键(key)</p>
+<p>4.程序里数字前面加零，表示八进制<br>5.数字类型：前面加0x属于十六进制的数据类型<br>6.console.log(Number.Max_vaule) 最大值          console.log(Number.Min_vaule) 最小值     console.log(Number.Max_vaule *2)无穷大   - console.log(Number.Max_vaule *2  ) 无穷小   NaN 不是数字，非数字<br>7.isNaN 用来判断是否是数字    console.log(isNaN(1323)) 如果是数字则判断为FALSE 如果不是则为true<br>8.布尔值 FALSE代表0 TRUE代表0     </p>
+<ol start="9">
+<li>console.log(undefined + ‘pink’)     // ‘undefinedpink’<br> console.log(undefined + 1) // NaN   // undefined 和数字相加 得到 NaN  / not a number</li>
+</ol>
+<p>// null 空值<br>console.log(null + ‘pink’) // nullpink<br>console.log(null + 1)   // 1</p>
+<p>console.log(true + ‘1’);      结果为 true1</p>
+<p>10.通过typeof 判断    变量属于哪种数据类型<br>11.<br>    变量值为null时 输出的结果为 Object<br> //<br>        var nul = null;<br>        console.log(typeof nul);</p>
+<p>特殊字符<br>\n     换行符，n   是   newline   的意思<br>\       斜杠   <br>&#39;       ‘   单引号<br>&quot;    ”双引号<br>\t    tab  缩进<br>\b    空白 退格</p>
+<p>12.<br>prompt 获取的数据是属于字符型<br>    // prompt 获取的数据是属于字符型<br>         var age =prompt(“请输入您的年龄”);<br>         console.log(age);<br>         console.log(typeof age);<br>         结果显示为字符型<br>13.<br>将数值或者布尔转换为字符型<br>  // 利用 ＋ 拼接法实现将布尔型转换为字符型 也叫隐式转换法<br>        console.log(bool + “”);</p>
+<p>14.将字符型转换为数字型<br>   var age = prompt(“请输入您的年龄”);<br>        // 1.使用parseInt(变量) 将字符型转换为数字型 得到的是整数<br>        console.log(parseInt(age));<br>        // parsrInt可以去掉单位<br>        console.log(parseInt(‘120px’));</p>
+<p>        // 2.使用parseFloat(变量) 可以取小数点 也叫浮点<br>        console.log(parseFloat(‘12.12’));<br>         // parsrFloat也可以去掉单位<br>         console.log(parseFloat(‘120px’))<br>转换为数字<br>  4. 隐式转化(自动将一种数据转换成另外一种数据类型)<br>        // 除了 + 号是进行拼接  ,其余的 - * / 都可以将字符串直接转换成数字型直接进行运算<br>        console.log(‘12’ - 1);<br>        console.log(‘10’ / 4);<br>        console.log(‘12’ * 3);</p>
+<pre><code>    console.log(2 &gt; &#39;1&#39;);  // true
+&#39;  &#39; , 0 , undefined, NaN , null      这五种 逻辑非 自动取反 隐式转换会自动将其转换为false
+</code></pre>
+<p>大于号 小于号 == 都具有转型点  </p>
+<ol start="15">
+<li><p>% 取余   console.log( 4 % 2 )  余数为零    判断数字是否 被整除</p>
+</li>
+<li><p>浮点数不能拿来比较 </p>
+<p>// 浮点数精度问题 0.3000000004</p>
+<pre><code> // 1, 先将它转换为整数  再换算成浮点数
+ var num = (0.1 * 10 + 0.2 * 10) / 10
+ console.log(num)
+     // 2. .toFixed( 保留几位小数 ) 
+ var num2 = (0.1 + 0.2).toFixed(1)  // 转化成字符串类型
+ console.log(num2);
+</code></pre>
+</li>
+</ol>
+<p>16.<br>递增运算符加减<br> var c = 10;<br>        c++; // 因为c++属于表达式 但是c++是先返回值 后加1 所以此时的c++为10 c为11<br>        var d = c++ + 2; // c为11 所以现在的c++ 值为11  所以结果为 13<br>        console.log(d);
+        </p>
+<p>        var e = 10;<br>        var f = e++ + ++e; // e++先返回值 再加一 所以此时的e++等于10  e等于11  ++e就等于12  所以结果为22<br>        console.log(f);<br>17.<br>运算符<br>        console.log( 3 == 5 ); //false      <br>        console.log( 10 == ‘10’); // true  == 默认会转换数据类型 会把字符串类型的转换为数字类型 只有值相等就可以<br>        console.log( 18 != 18 ); //false  不等于号<br>        console.log( 18 === 18 ); // true     全等于       两侧的值和数据类型必须全部都一模一样 结果才会是true</p>
+<p>18.<br>逻辑运算中断<br>&amp;&amp; 只要有一侧为假就为假<br>console.log(  3 &lt; 5 &amp;&amp; 3 &gt;2     )<br>如果第一个表达式的值为真，则返回表达式2<br>如果第一个表达式的值为假，则返回表达式1<br>只要碰到了假值(false)，就会短路，并返回该假值<br>console.log( 123 &amp;&amp; 456 );        // 456<br>console.log( 0 &amp;&amp; 456 );          // 0<br>console.log( 123 &amp;&amp; 456&amp;&amp; 789 );  // 789</p>
+<p>switch语句          // 表达式经常写变量<br>var num =1<br>switch(num){<br>case  vaule 1:<br>console.sole(‘1’)<br>break;<br>case  vaule 2:<br>console.sole(‘2’)<br>break;</p>
+<p>}<br>|| 只要有一侧为真 就为真<br>如果第一个表达式的值为真，则返回表达式1<br>如果第一个表达式的值为假，则返回表达式2<br>逻辑或  (只要碰到了真值(true)，就会短路，并返回该真值<br>console.log( 123 || 456 );         //  123<br>console.log( 0 ||  456 );          //  456<br>console.log( 123 || 456 || 789 );  //  123</p>
+<ol start="19">
+<li>for循环<br>for ( 初始化变量; 条件表达式; 操作表达式  )<br>20 .while循环   当…..的时候    当条件表达式为true 就执行循环体代码   当….不等于的时候<br>var i =1<br>while (条件表达式) {<br>//  循环体代码<br>i++<br>}<br>continue  关键字 退出本次循环 (当次的循环)  继续执行剩余次数循环</li>
+</ol>
+<p>获取数组的长度   数组名.length<br>获取数组中的某一个(arr[  i  ])</p>
+<p>数组:<br>    var sum = 0<br>        var arr = [2, 6, 1, 7, 4]<br>        for (var i = 0; i &lt; arr.length; i++) {<br>            sum = sum + arr[ i ]<br>        }<br>        // 获取数组长度 数组名称.length<br>        console.log(sum);<br>arr.length = 10 说明里面有10个数<br> 往新数组里面加元素             newArr[newArr.length ] = arr [ i ]  (给数组连续追加元素的固定写法)</p>
+<p> // 交换两个变量<br>        var num1 = 20<br>        var num2 = 10;<br>        [num1, num2] = [num2, num1]<br>        console.log(num1, num2);<br>// 在[]和()前面加分号<br> //  ;[]<br> //  ;()</p>
+<p>翻转数组:<br> // 翻转数组  arr.reverse() 改变了原数组<br>        arr.reverse()<br>        console.log(arr);<br>不改变原数组,复制一份原数组 先复制再进行翻转<br>      var newArr = arr.slice().reverse<br>        console.log(newArr);<br>        console.log(arr);<br>求最大值: 定义一个 max变量  var max = arr[ 0 ]    现将数组的第一个变量存进去 再让其与其他元素比较</p>
+<p>函数:</p>
+<p>        function getMax(arr) {</p>
+<p>        }<br>        var res = getMax([5, 2, 99, 1000, 101, 67, 77])</p>
+<p> return 后面的代码不会执行  只能返回一个值<br>冒泡排序: 外层 n-1  内层 n -1 -i</p>
+<p>es6之前:作用域分为全局作用域和函数作用域<br>在函数内部没有声明直接赋值的变量也属于全局变量   num =10       全局变量任何一个作用域都可以使用<br>函数的形参也属于局部变量<br>全局作用域下的变量都挂载到window对象下面, window是窗口的意思,它是浏览器的顶级对象<br>从执行效率来看全局变量和局部变量<br>1.全局变量只有当浏览器关闭的时候才会销毁,比价浪费内存<br>2.局部变量 当我们的程序执行完才会销毁,比较节约内存</p>
+<p>Es6新增块级作用域   if{}  for{} 是一个语句,不是函数<br>if(ture) {<br>var num =123   // es5<br>let  num1 = 123  // es6<br>const num2 =123  // es6<br>]         //  用let和const声明的变量,因为存在块级作用域的关系,我们在外部不能访问</p>
+<p>作用域链 : (内部函数访问外部函数)  就近原则  如果当前函数没有变量,就去外面的那个函数寻找 </p>
+<p>预解析: js引擎会把js 里面所有带var 和 function的变量 提升到当前作用域在前面(提升到当前作用域最顶部)      面试题:  study/预解析案例<br>表达式声明 var fun  = function() {<br>}    fun()             如果是表达式声明的函数， 调用一定写在声明的下方</p>
+<p>对象:属性和方法的集合</p>
+<p>构造函数:  1.构造函数名字首字母必须大写  2.不需要写return也可以返回结果   3. 我们调用构造函数 必须使用 new  4. 我们只要new Star() 调用函数就创建一个对象 ldh  {}  5.构造函数里 属性和方法前面必须添加 this<br>通过构造函数创建对象的过程,也叫做对象的实例化      构造一个函数,相当于一个模板,通过它,我们可以创建一系列具有相同属性和方法的对象<br>new关键字执行过程:  1.在内存中创建了一个空对象  2. 让this指向这个对象 3.执行构造函数里面的代码,给这个对象添加属性和方法 4.返回这个新创的对象<br>遍历对象:( for 变量 in )</p>
+<p>Math对象<br> console.log(Math.min()); // 返回     min        infinity<br> console.log(Math.max()); // 返回     max       - infinity<br> console.log(Math.max(1, 23, ‘pink’))   //  如果有任意参数不能转换为数字 无论是最大值还是最小值,返回的都是 NaN</p>
+<p>如果想将一个数组传入进去:<br>Math.max()<br>var arr = [1,2,3,4,5,5,6]<br> console.log(Math.max(…arr));    //  …arr可以展开数组  es6属性</p>
+<p>随机 Math.random</p>
+<ol>
+<li>从1 到任意值的整数<br>parseInt(Math.random() * n + 1)</li>
+<li>从任意数开始 到任意数结束 (包含这两个数)</li>
+</ol>
+<p>日期 Date<br>1.var month = date.getMonth() + 1 月数需要加1<br>2.通过 valueOf()  getTime() 获得Date总的毫秒数(时间戳)<br>var date = new Date()<br>      1）  console.log(date.valueOf());<br>          2）    console.log(date.getTime());<br>3）var date1 = +new Date() // 不传参数表示从1970年1月1日到现在多少毫秒<br>4）var date2 = Date.now()   // H5 新增的 获得总的毫秒数<br> 检测是否是数组的方法</p>
+<ol>
+<li> A instanceof B (Array)        console.log(arr instanceof Array)  // true 是数组    (检测引用类型)</li>
+<li>Array.isArray(数组变量名)     console.log(Array.isArray(arr))  // 如果是数组, 返回true</li>
+</ol>
+<p>利用new Array()给数组添加元素<br>var arr = new Array(2) // 如果只传入一个参数 2 表示数组的长度为2<br>var arr2 = new Array(2, 4) // 如果传入多个参数 相当于  [2,4]</p>
+<p>检测数据类型:     </p>
+<ol>
+<li><p> A instanceof B </p>
+</li>
+<li><p>检测基本数据类型  typeof        返回数据类型是字符串表达         可以判断 undefined/ 数值 / 字符串 / 布尔值    </p>
+</li>
+<li><p>perfect最好的  Object.prototype.toString.call()</p>
+</li>
+<li><p>===          可以判断 undefined / null<br>push / unshift / pop / shift </p>
+</li>
+<li><p>push / unshift / pop / shift 都会改变原数组</p>
+</li>
+<li><p>push / unshift 是添加, 返回的是新数组的长度    push:数组的末尾 添加一个或者多个数组元素  unshift:在我们数组的开头 添加一个或者多个数组元素</p>
+</li>
+<li><p>push()/ unshift() / pop() / shift()  都会改变原数组          var res = arr.push(9, ‘orange’)    数组名.push</p>
+</li>
+</ol>
+<p>2.push(从后) / unshift(从前) 是添加, 返回的是新数组的长度<br>3.pop(最后一个) / shift(第一个) 是删除, 一次只删除一个, 不需要传参数. 返回的是被删除的元素. </p>
+<p>翻转数组: var arr = [1,2,1,4,4,5,6,7]      arr.reverse();    console.log(arr )</p>
+<p>数组排序（冒泡排序） 数组名.sort()<br>        var arr1 = [1, 4, 5, 6, 3, 0, 63, 35, 32, ]<br>        arr1.sort(function(a, b) {<br>            return a - b // a - b 是升序     a - b &gt; 0<br>        })<br>        console.log(arr1);<br>字符串属性 length<br>concat  拼接数组   var str = ‘123’            字符串方法<br>                          console.log(str.concat(‘456’));<br> substring(star,end)  截取字符串   取不到end        console.log(str1.substring(0, 3));<br>替换字符.replace(‘被替换的字符’,’要替换的字符’)<br>     slice()截取数组  splice()修改数组    MDN查找</p>
+<p>将数组转换为字符串<br>1.数组名.toSting()<br>2.join(分隔符)  数组名 .join(分隔符)      console.log(arr.join(‘ - ‘)  )</p>
+<p>将字符串转换为数组 split(‘分隔符’)  不改变元素组<br>字符串里面的分割符是什么样,split(‘)里面的分隔符就是什么样</p>
+<p>获取数组的索引号  ( 根据数组参数得到索引号)<br>1.indexOf(数组元素)    1)它只返回找到的第一个元素的索引号   console.log( arr.indexOf(‘blue’) )<br>如果想要略过第一个要查的值去查第二个  console.log( arr.indexOf(‘blue’ 索引号的第二个) )<br>2.lastIndexOf(数组元素)  作用就是返回该数组元素的索引号 从后面开始查找<br>如果这个元素在数组中不存在, 没找到, 返回 -1     </p>
+<p>数组去重 利用新数组.indexOf(数组元素) 如果返回 -1 就说明新数组 里面没有该元素<br>if (newArr.indexOf(arr[i]) === -1) {<br>newArr.push(arr[i])<br> }        数组去重(第六天)</p>
+<p>字符串对象  根据位置返回字符 :   ( 根据索引号获取参数)</p>
+<ol>
+<li> 字符串名 .charAt(index)<br>var str = ‘andy’<br>console.log(str.charAt(3));     // 写索引号 返回值为元素</li>
+<li> 字符串名.charCodeAt(index)  返回相应索引号的字符ASCII值 目的： 判断用户按下了那个键<br>console.log(str.charCodeAt(0));</li>
+<li>str[index]  H5 新增的<br>  console.log(str[0]);<br>console.log( str1.substring(1, 3)) ;        str1.substring(1, 3) 获取的是第1个元素到第二个 不包含第三个</li>
+</ol>
+<p>基本包装类型<br> var str = ‘andy’;<br>        console.log(str.length);   为什么能够使用length属性?</p>
+<pre><code>   1.将简单数据类型包装成复杂数据类型
+    var temp = new String(&#39;andy&#39;)
+    2.把临时变量的值 给str
+     str = temp
+</code></pre>
+<p> 3.销毁这个临时变量<br>         temp = null</p>
+<p>简单数据类型 是存在栈里面 里面直接开辟一个空间存放的是值 传参是把值结果传过去了<br>复杂数据类型 首先在栈里面存放地址 十六进制表示 然后这个地址指向堆里面的数据 ( 通过new字关键字创建的对象也就叫复杂数据类型)</p>
+<p>includes（） 包含的意思 如果有false返回false<br>Array (数组)  : 一种特别对象(数值下标)<br>=== / ==(会做数据转换)<br>console.log返回的数据类型是函数</p>
+<p>undefined 与 null的区别<br>undefined代表定义未赋值<br>null定义赋值了 只是值为null<br> 2. 什么时候给变量赋值为null<br>初始赋值,表明将要赋值的对象<br>结束前, 让对象成为垃圾对象<br>3. 严格区分变量类型与数据类型<br>数据的基本类型<br>基本类型  对象类型<br>变量的类型(变量内存值的类型)<br>      基本类型:保存的就是基本类型的数据<br>引用类型:保存的就是地址值</p>
+<p>不会改变原数组：</p>
+<pre><code> concat() 连接两个或更多数组，返回结果
+every() 检测数组中每个元素是否都符合要求
+some() 检测数组中是否有元素符合要求
+filter() 挑选数组中符合条件的并返回符合要求的数组
+join() 把数组的所有元素放到一个字符串
+toString() 把数组转成字符串
+slice() 截取一段数组，返回新数组
+indexOf 搜索数组中的元素，并返回他所在的位置 
+</code></pre>
+<p>————————————————<br>会改变原数组：</p>
+<p>1 添加元素类：（返回新的长度）</p>
+<pre><code>push() 把元素添加到数组尾部
+unshift() 在数组头部添加元素
+</code></pre>
+<p>2 删除元素类：（返回的是被删除的元素）</p>
+<pre><code>pop() 移除数组最后一个元素
+shift() 删除数组第一个元素
+</code></pre>
+<p>3 颠倒顺序：</p>
+<pre><code>reverse() 在原数组中颠倒元素的顺序
+</code></pre>
+<p>4 插入、删除、替换数组元素：（返回被删除的数组）</p>
+<pre><code>splice(index, howmany, item1…intemx)
+index代表要操作数组位置的索引值，必填
+howmany 代表要删除元素的个数，必须是数字，可以是0，如果没填就是删除从index到数组的结尾
+item1…intemx 代表要添加到数组中的新值
+</code></pre>
+<p>5 排序</p>
+<pre><code>sort() 对数组元素进行排序
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/07/09/webApi/" rel="prev" title="webApi">
+                  <i class="fa fa-chevron-left"></i> webApi
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/07/11/HTML&CSS/" rel="next" title="HTML&CSS">
+                  HTML&CSS <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">保持热爱 奔赴山海</span>
+</div>
+  <div class="powered-by">
+   
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

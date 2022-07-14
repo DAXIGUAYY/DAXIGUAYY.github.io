@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.json","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="事件基础API :   application programming interface  :  应用程序编程接口.   API &#x3D;&#x3D;&gt; 接口接口:  联想一下手机的接口, 我们可以通过它实现充电的功能, 我们不需要了解内部怎么实现这个功能的.在我们程序里面, 接口 可以看作是 方法或者函数 或者 说工具. ,比如 alert(),  它就是浏览器提供给我们的一个接口. 弹出一个警示框.再">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webApi">
+<meta property="og:url" content="http://example.com/2022/07/09/webApi/index.html">
+<meta property="og:site_name" content="大西瓜很nice">
+<meta property="og:description" content="事件基础API :   application programming interface  :  应用程序编程接口.   API &#x3D;&#x3D;&gt; 接口接口:  联想一下手机的接口, 我们可以通过它实现充电的功能, 我们不需要了解内部怎么实现这个功能的.在我们程序里面, 接口 可以看作是 方法或者函数 或者 说工具. ,比如 alert(),  它就是浏览器提供给我们的一个接口. 弹出一个警示框.再">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-07-09T13:46:12.000Z">
+<meta property="article:modified_time" content="2022-07-13T09:51:11.890Z">
+<meta property="article:author" content="保持热爱 奔赴山海">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/07/09/webApi/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2022/07/09/webApi/","path":"2022/07/09/webApi/","title":"webApi"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>webApi | 大西瓜很nice</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">大西瓜很nice</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">永远憧憬每一天</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="保持热爱 奔赴山海"
+      src="/%5Cimages%5Ctit.jpg">
+  <p class="site-author-name" itemprop="name">保持热爱 奔赴山海</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=394670&auto=1&height=66"></iframe>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/07/09/webApi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/%5Cimages%5Ctit.jpg">
+      <meta itemprop="name" content="保持热爱 奔赴山海">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="大西瓜很nice">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="webApi | 大西瓜很nice">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          webApi
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-07-09 21:46:12" itemprop="dateCreated datePublished" datetime="2022-07-09T21:46:12+08:00">2022-07-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-07-13 17:51:11" itemprop="dateModified" datetime="2022-07-13T17:51:11+08:00">2022-07-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/webApi/" itemprop="url" rel="index"><span itemprop="name">webApi</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>事件基础<br>API :   application programming interface  :  应用程序编程接口.   API ==&gt; 接口<br>接口:  联想一下手机的接口, 我们可以通过它实现充电的功能, 我们不需要了解内部怎么实现这个功能的.<br>在我们程序里面, 接口 可以看作是 方法或者函数 或者 说工具. ,<br>比如 alert(),  它就是浏览器提供给我们的一个接口. 弹出一个警示框.<br>再比如说prompt(), 它也是一个接口.<br>Web API : 浏览器提供给我们的操作页面元素 和 浏览器功能 的 API  ( DOM,  BOM)<br>Web API = DOM  + BOM ;<br>DOM: document object model   文档对象模型,  一个页面就是一个文档, 把我们的页面看做一个对象.<br>顶级对象就是document..<br>BOM : browser object model 浏览器对象模型, 把我们的浏览器看做一个对象. 提供给我们一些方法, 操作浏览器的功能.<br>DOM作用: 通过DOM, 我们可以改变页面的内容 , 结构, 样式.<br>DOM树 : 代表了一种层级结构, 表示元素之间的一种层级关系 . 比如父子, 兄弟关系.<br>文档 : document  一个页面就是一个文档.<br>元素: element .  什么是元素: 页面上的所有标签都是元素.  h1 , div, span , script html.<br>节点: node   页面上所有的内容都叫节点.  (元素节点, 属性节点, 文本节点, 注释节点)</p>
+<p>getElements  加s的都是伪数组<br>document.getElementById(‘id’)     通过id名 获取元素<br>console.dir(id名)  打印返回我们的返回的元素 更好查看里面的属性和方法      返回的是一个对象</p>
+<p>document.getElementsByTagName(‘ol’)   返回带有指定标签的对象的集合  以伪数组的形式存储的   如果页面中没有这元素 返回的是个伪数组</p>
+<p> ol ( 父级元素名 ).getElementsByTagName(‘li  (子元素名) ‘)    获取某个元素(父级元素)内部所有指定标签名的子元素    也可以通过id的方式获取</p>
+<p>document.getElementsByClassName(‘box’)   通过类名获取元素 返回的是一个伪数组</p>
+<p>查<br>H5C3新增获取元素方法 （选择器需要加 .box   #nav） 推荐使用<br> document.querySelector(‘选择器’)    返回指定选择器的第一个元素对象<br> document.querySelectorAll(‘选择器’)     返回指定选择器的所有元素对象 返回的也是一个伪数组<br>如果页面没有这个标签，返回的是一个空的伪数组<br>  var lis4 = document.querySelectorAll(‘#nav li  ‘)     获取id名为nav里面所有的li标签</p>
+<p>总结获取元素的一些方法 API<br>ID: document.getElementById(‘’)    不用加#号<br>标签名:  document.getElementsByTagName(‘标签名’)    ==&gt;elements  返回的是一堆, 元素集合, 伪数组.<br>H5新增:<br>类名 :  document.getElementsByClassName(‘类名’)  ==&gt; 不加 ., 返回的也是元素集合, 伪数组. 一堆.<br>选择器:<br>document.querySelector(‘选择器’)    (类名 : .   id : #  标签)   ==&gt; 返回的是指定选择器的第一个元素对象.<br>document.querySelectorAll(‘选择器’)    (类名 : .   id : #  标签)    ==&gt; 返回的是一堆元素集合. 伪数组.</p>
+<p>特殊的两个<br>body : document.body<br>html  : document.documentElement</p>
+<p>事件<br> //  事件三要素 谁，触发了设什么，要做什么<br> // 1.事件源<br> // 2.事件类型<br> // 3.事件处理程序<br> btn.onclick  ==&gt; 点击才会调用函数. 点我们点击的时候, 才会去执行函数内部的代码<br>改变元素内容<br>element.innerText      非标准</p>
+<p>创建<br>element.innerHTML  最常用 是 w3c指定的  识别html标签 比如<strong><br>createElement 新建一个元素</p>
+<p>常用属性操作<br>表单里面的值是通过vaule修改的</p>
+<p>按钮设置可以点击多次 （密码小眼睛）</p>
+<p>通过js修改元素的大小，颜色，位置<br>1.element.style 行内样式操作<br>改<br>2.修改许多元素样式 element.ClassName    适用于样式较多或者功能较多的情况下使用  会覆盖以前的类名<br>（1） 先写一个css样式<br>让我们当前的元素改为 change    this.className =‘  change  ’<br>如果想不替换掉掉原来的类名  先将 this className = ‘ 原类名    现类名  ’</p>
+<p>循环精灵图 （通过for循环给各个li标签添加背景图片）</p>
+<p>显示隐藏文本框内容<br>获得焦点onfocus   失去焦点 onblur<br>onmouseover 鼠标经过     onmouseout鼠标离开<br>mosuedown 鼠标按下 mouseup 鼠标松开</p>
+<p>排他思想（如果有相同一组元素，我们想给某一个元素设置某种样式）&amp;点击一个 取消另外一个</p>
+<p> element.getAttribute()  获取类名里面的内容</p>
+<p>更改原来的属性名 （更改自定义） element.setAttribute( ‘属性’, ‘值’  )</p>
+<p>自定义属性：<br>以 data-xxx 开头, 直接写在标签上。<br>获取 data- 开头的自定义属性 element.dataset</p>
+<p>节点</p>
+<p>父节点 node.parentNode  / element.parentNode<br>获取到的是最近的一级父节点,如果找不到 返回null</p>
+<p>子节点 node.children   </p>
+<p>获取第一个子元素 node.firstElementChild<br>获取最后一个子元素 node.lastElementChild<br>获取第一个子节点 node.firstChild<br>获取最后一个子节点 node.lastChild</p>
+<p>兄弟节点</p>
+<p>增加<br>创建和添加节点<br>node.appendChid( 子元素 ) 添加到父级元素末尾<br>node.insertBefore( 子元素,指定元素的位置 )</p>
+<p>删<br>node(父级元素).removeChild(子元素)从dom中删除一个子节点,返回删除的节点   只能删除离父节点最近的一个子节点<br>node(将要被复制的元素).cloneNode()  克隆节点  克隆以后还要添加  括号为空或者false不会克隆里面的内容  括号里面加true就可以显示元素里面的内容<br>1.先获取要克隆的节点   2.克隆要克隆的节点  3.添加克隆的元素到某个位置 </p>
+<p>(btn.disabled = true)表示开启禁用</p>
+<p>事件高级<br>1.传统注册事件:<br> 特点:具有唯一性    同一个元素,同一件事只能处理一个函数,最后注册的处理函数将会覆盖前面注册的处理函数<br>事件对象：当某个事件触发的时候, 和这个事件相关的系列信息集合都放在这个event事件对象里面<br>2. 方法监听注册方式    addEventListener(‘click’，function（event （对象）   ）{<br>e.target(属性)<br>})  w3c推荐方式 </p>
+<p>(1)里面的事件类型是字符串 必定加引号 而且不带on<br>(2)同一个元素 同一件事件可以添加多个侦听器(事件处理程序)<br>排他思想          </p>
+<p> 传统注册事件       删除事件一定要解绑,写在函数里面<br>            btn.onclick = null<br> 事件监听解绑事件 .removeEventListener(‘click’,fn )  删除事件:当点击一次以后不需要调用 一定要写在函数里面</p>
+<p>DOM事件冒泡<br>事件捕获: 从外到内    冒泡:从内到外</p>
+<p>e.targrt 返回的是触发事件的对象(元素)      放在函数function() 里面</p>
+<p>e.targrt 和 this和e.currentTarget            e.targrt 返回的是触发事件的对象 也就是点的哪个就是哪个元素    this和e.currentTarget 哪个元素绑定了这个点击事件,那么就返回谁<br>e.currentTarget 全等 this </p>
+<p>e.type指的是返回事件类型 比如 返回 click<br> e.preventDefault();   阻止默认行为事件 让链接不跳转 或者让提交按钮不提及      return false 也可以阻止链接跳转<br>阻止冒泡 e.stopPropagation()  </p>
+<p>事件委托原理  利用事件冒泡,将事件监听设置在父节点上 通过父节点来监听子节点的事件<br>优点:只操作一次DOM ,提高程序性能(只需要绑定一次)    动态创建的子元素,也拥有注册事件</p>
+<p>常用的鼠标事件(了解)  配合e.preventDefault();阻止默认行为<br>1.禁止鼠标右键菜单 contextmenu<br>2. selectstart 禁止鼠标选中    </p>
+<p>鼠标移动事件<br>mousemove</p>
+<p>键盘事件</p>
+<p>keypress 会区分大小写<br>keyup =&gt; keydown =&gt; keypress<br>     // input.focus() 获得焦点<br>        // input.blur() 失去焦点</p>
+<p>BOM<br>窗口加载事件<br>传统方式  window.onload = function(){}  把元素写在里面以后 可以将js代码写到任意位置  只能写一次<br>使用addEventListener则没有限制</p>
+<p>页面加载事件window.addEventListener()<br>// load 事件:当页面所有内容加载完之后,包括css js 图片等 执行的回调函数</p>
+<p>DOMContentLoaded : DOM 元素加载完成以后,执行回调函数,此时, css , js, img 还没加载完<br>通过这个页面加载事件,我们可以将js代码写在head里面<br>DOMContentLoaded 实际应用场景 : 当一个页面图片特别多的时候 ,我们希望早一点执行js代码时,可以使用DOMContentLoaded做来监听  </p>
+<p>resize  浏览器窗口大小的监听<br>window.innerWidth  获取当前浏览器窗口的大小</p>
+<p>定时器<br> 1.window.setTimeout(调用函数, 延迟时间)  只执行一次单位为毫秒</p>
+<p>可以用变量存起来</p>
+<p>清除定时器:  window.clearTimeout(timeoutId)   写在函数里面    </p>
+<p>window.setInterval(func, delay)</p>
+<p>this 在定义的时候不能确定，只有在执行的时候才能确定它的指向！！！！<br>全局作用域中/普通函数调用/定时器里面， this 指向 window<br>函数方法调用中，谁调用这个方法，this指向谁<br> 事件注册的时候， this指向被绑定的元素<br>构造函数中，this指向的是构造函数的实例<br>类里面的指向问题:<br>constructor 里面的this指向的是创建的对象的实例<br>类里面方法中this 指向的是这个方法的调用者</p>
+<p>//! 1. JS是单线程语言<br>// 同一时间只能做一件事情(同步), 所有的任务都顺序执行.<br>//! 2. 线程 和 进程<br>// Q: 什么是线程 什么是进程?<br>// 进程是资源分配的最小单位,线程是cup调度的最小单位. 太抽象了,不好理解.<br>// 进程(process) : 一个进程就是一个正在运行的程序.(任务管理器)<br>// 线程(thread) : 一个进程内执行着的每个任务就是一个线程.<br>//                线程是允许应用程序并发执行多个任务的一个机制.<br>// 简单的比如 进程 = 火车  线程 = 车厢<br>// 1. 线程必须依附于进程存在<br>// 2. 一个进程可以包含多个线程 (一个火车里面有多个车厢)<br>//! 3 同步 和 异步<br>// 同步: 同一时间只能做一件事情(同步), 所有的任务都顺序执行, 上一个任务执行完,才执行下一个任务.<br>// 异步: 可以同一时间执行多个任务. 提高了程序的执行效率(并发执行)</p>
+<pre><code>    // 加了一个异步进程的概念 : 处理什么时候把回调函数写入任务队列
+    // setTimeout
+    // 注册事件  click 等事件 会交给 异步进程处理
+
+    // 同步任务: 同步仍无都在主线程上执行, 形成一个执行栈
+    // 异步任务: 异步任务是通过回调函数来完成的.
+
+    // 一般而言，异步任务有以下三种类型：
+    // 普通事件，如click，resize等
+    // 资源加载，如load，DOMContentLoaded等
+    // 定时器，包括setTimeout，setInterval等
+    // 其实就是那些回调函数
+
+    // JS执行机制 **** 理解记忆, 重点!
+    // 要求记下这块
+    // 1. 我们先判断JS任务是同步任务还是异步任务, 所有的同步任务都放入主线程的执行栈中执行.
+    // 2. 异步任务会提交给异步进程处理, 当满足触发条件后, 异步进程会将异步任务(回调函数)放入任务队列中.
+    // 3. 当主线程中所有的(所有的,所有的)同步任务执行完后, 会去任务队列中查找是否有可执行的异步任务, 如果有, 拿到主线程中执行,
+    //  执行完后, 再去任务队列中查找. 不断循环这样一个过程. 
+    // Event loop .&#39;
+
+
+
+    // 以后面试会考! 90%  记下来 ! 
+    // 事件循环 event loop 
+    // 异步任务 : 又分为 宏任务 (macroTask) 和 微任务 (microTask)
+    // 宏任务 : 
+    // 1. 整个script代码块
+    // 2. setTimeout
+    // 3. setInterval
+    // 4. setImmediate
+
+    // 微任务 : 
+    // 1. promise.then() / promise.catch()
+    // 2. process.nextTick (node)
+    // 3. async await   
+    // 4. mutationObserver 
+
+    // ==&gt;  ! 每执行完一个宏任务, 会清空(执行完所有的)当前的微任务队列. 
+</code></pre>
+<p>元素偏移量  offset<br>1.element. offsetTOP  element. offsetLeft   元素相对于body的距离     如果这个元素有父元素 也是相当于body的距离  如果想得到这个元素相对于父级元素的距离 则要给父级元素设置定位<br>2..ement. offsetWidth ement. offsetHeight 得到元素的大小 宽度 高度 是包含border和padding<br>style.width和offsetWidth的区别：<br>style.width 获取到的值是不包padding和border 只能获取行内样式中的width  可以修改样式<br> offsetWidth 获得的是包含width+ border +padding  得到的值没有像素单位  可以得到任何样式中的值</p>
+<p>3..element. offsetPartent 返回带有定位的父级元素 否则返回body</p>
+<p>获取页面滚动距离 : window.pageYOffset </p>
+<p>client系列<br>1.element.clientTop 返回元素上边框的大小  .element.clientLeft 返回元素左边框的大小<br>2..element.clientWidth 返回自身包括padding和内容区域宽度 不包含边框  element.clientWidth 返回自身包括padding和内容区域高度 不包含边框</p>
+<p>立即执行函数<br>function fn () {  console.log(‘sddas’)  }   fn()<br>( function (){} )()   或者 (function(){}())</p>
+<p>scroll  系列 元素滚动<br>1.scrollHeight 实际内容的大小  不含边框<br>2.element.scrollTop   返回元素被卷去的头部 和 scrollLeft搭配使用</p>
+<p>页面被卷曲的头部 window.pageYOffset 获得被卷去的头部的高度<br>mouseenter mouseleave没有事件冒泡<br>动画函数封装 （通过定时器setinterval()不断移动盒子位置）</p>
+<pre><code>  window.scroll(&#123;
+            top: 0,
+            behavior: &#39;smooth&#39;
+        &#125;)       平滑滚动到顶部
+</code></pre>
+<p>移动端</p>
+<ol>
+<li>e.touches    正在触摸屏幕的所有手指的列表信息(伪数组)</li>
+<li>e.targetTouches  正在触摸当前dom元素的手指列表信息</li>
+<li>e.changedTouches 手指状态发生了改变时的手指列表信息</li>
+</ol>
+<p>产生300ms延迟的原因<br>由于移动端会有双击缩放的这个操作，因此浏览器在click之后要等待300ms，<br>看用户有没有下一次点击，也就是这次操作是不是双击</p>
+<p>不能存储对象数组 只能存储字符串的格式    </p>
+<p>添加类名 element.classList.add(‘类名’)         注意不要加类名的符号 . 不会影响到其他类名 在后面追加<br>删除类名element.classList.remove()<br>切换类名 element.classList.toggle() </p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/07/10/Javascript%E5%9F%BA%E7%A1%80/" rel="next" title="JavaScript">
+                  JavaScript <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">保持热爱 奔赴山海</span>
+</div>
+  <div class="powered-by">
+   
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
